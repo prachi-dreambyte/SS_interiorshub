@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test WhatsApp Integration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-section {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .whatsapp-btn:hover {
+            background: #1da851;
+        }
+        .test-form {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .test-form input, .test-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .test-form button {
+            background: #1a1a1a;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .url-display {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+            font-family: monospace;
+            word-break: break-all;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test WhatsApp Integration</h1>
+    
+    <div class="test-section">
+        <h2>Direct WhatsApp Links</h2>
+        <p>Test these direct WhatsApp links:</p>
+        
+        <div>
+            <a href="https://wa.me/919990447773" class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Direct WhatsApp Chat
+            </a>
+            <p>Phone number: +91 9990447773</p>
+        </div>
+        
+        <div>
+            <h3>Test with pre-filled message:</h3>
+            <div class="url-display" id="whatsappUrl">
+                https://wa.me/919990447773?text=Hello%20SS%20Interiorshub%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.
+            </div>
+            <a href="https://wa.me/919990447773?text=Hello%20SS%20Interiorshub%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Test with Message
+            </a>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Form to WhatsApp Test</h2>
+        <p>This simulates what the contact form will do:</p>
+        
+        <div class="test-form">
+            <input type="text" id="testName" placeholder="Your Name" value="John Doe">
+            <input type="email" id="testEmail" placeholder="Your Email" value="john@example.com">
+            <input type="text" id="testSubject" placeholder="Subject" value="Interior Design Inquiry">
+            <textarea id="testMessage" placeholder="Your Message" rows="4">Hello, I'm interested in getting a quote for my living room interior design. Can you please provide more information about your services?</textarea>
+            
+            <button onclick="generateWhatsAppUrl()">Generate WhatsApp URL</button>
+        </div>
+        
+        <div class="url-display" id="generatedUrl">
+            Generated URL will appear here
+        </div>
+        
+        <a href="#" class="whatsapp-btn" id="testLink" target="_blank" style="display: none;">
+            <i class="fab fa-whatsapp"></i> Test Generated Link
+        </a>
+    </div>
+    
+    <div class="test-section">
+        <h2>Implementation Notes</h2>
+        <ul>
+            <li>WhatsApp number: <strong>+91 9990447773</strong></li>
+            <li>Format: <code>https://wa.me/919990447773?text=YourMessage</code></li>
+            <li>URL encoding: Spaces become %20, line breaks become %0A</li>
+            <li>For bold text in WhatsApp: Use *asterisks* around text</li>
+            <li>For italics: Use _underscores_ around text</li>
+            <li>The contact form will open WhatsApp with pre-filled message</li>
+        </ul>
+    </div>
+    
+    <script>
+        function generateWhatsAppUrl() {
+            const name = document.getElementById('testName').value;
+            const email = document.getElementById('testEmail').value;
+            const subject = document.getElementById('testSubject').value;
+            const message = document.getElementById('testMessage').value;
+            
+            // Format the message similar to the React component
+            const whatsappMessage = `*New Contact Form Submission from SS Interiorshub Website*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Subject:* ${encodeURIComponent(subject)}%0A*Message:* ${encodeURIComponent(message)}%0A%0A_This message was sent via the contact form on SS Interiorshub website._`;
+            
+            const whatsappUrl = `https://wa.me/919990447773?text=${whatsappMessage}`;
+            
+            document.getElementById('generatedUrl').textContent = whatsappUrl;
+            
+            const testLink = document.getElementById('testLink');
+            testLink.href = whatsappUrl;
+            testLink.style.display = 'inline-flex';
+        }
+        
+        // Initialize with a sample
+        generateWhatsAppUrl();
+    </script>
+</body>
+</html>

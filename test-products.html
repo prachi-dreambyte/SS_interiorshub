@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Products</title>
+    <style>
+        .service-item {
+            background-color: #ffffff;
+            box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.03);
+            border-radius: 24px;
+            padding: 40px;
+            margin: 20px;
+        }
+        .service-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 50px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #e3e3e8;
+        }
+        .service-top .title {
+            font-size: 30px;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+        .service-item p {
+            margin-bottom: 0;
+        }
+        .product-action {
+            margin-top: 20px;
+        }
+        .product-action .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background-color: #caa05c;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .product-action .btn:hover {
+            background-color: #b89050;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Products Component</h1>
+    
+    <div class="service-item">
+        <div class="service-top">
+            <h3 class="title">Fluted</h3>
+            <div class="icon">
+                <img src="assets/img/icon/service-icon-1.png" alt="Fluted" width="50">
+            </div>
+        </div>
+        <p>Elegant fluted panels for modern interior designs, adding texture and depth to walls and surfaces.</p>
+        <div class="product-action">
+            <a href="/assets/pdf/FLUTED LOUVERS 9 STEP, GL SERIES, GLOSSY 9 STEP.pdf" class="btn" target="_blank">
+                <span>See Catalog</span>
+                <i>📥</i>
+            </a>
+        </div>
+    </div>
+    
+    <div class="service-item">
+        <div class="service-top">
+            <h3 class="title">Super heavy</h3>
+            <div class="icon">
+                <img src="assets/img/icon/service-icon-2.png" alt="Super heavy" width="50">
+            </div>
+        </div>
+        <p>Durable and robust heavy-duty materials for structural applications requiring maximum strength.</p>
+        <div class="product-action">
+            <a href="/assets/pdf/PVC PANEL.pdf" class="btn" target="_blank">
+                <span>See Catalog</span>
+                <i>📥</i>
+            </a>
+        </div>
+    </div>
+    
+    <div class="service-item">
+        <div class="service-top">
+            <h3 class="title">3D PANEL(MIRROR PANEL)</h3>
+            <div class="icon">
+                <img src="assets/img/icon/service-icon-2.png" alt="3D Panel" width="50">
+            </div>
+        </div>
+        <p>Mirror finish 3D panels for contemporary interior designs with reflective surfaces.</p>
+        <div class="product-action">
+            <a href="/assets/pdf/3D PANEL{MIRROR PANEL}.pdf" class="btn" target="_blank">
+                <span>See Catalog</span>
+                <i>📥</i>
+            </a>
+        </div>
+    </div>
+    
+    <footer style="margin-top: 50px; padding: 20px; background-color: #f5f5f5; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 20px;">
+                <a href="#about" style="color: #333; text-decoration: none;">About Us</a>
+                <a href="#services" style="color: #333; text-decoration: none;">Services</a>
+                <a href="#products" style="color: #333; text-decoration: none;">Products</a>
+                <a href="#gallery" style="color: #333; text-decoration: none;">Gallery</a>
+                <a href="#portfolio" style="color: #333; text-decoration: none;">Our Projects</a>
+            </div>
+            <p style="color: #666; font-size: 14px;">© 2026 SS Interiorshub. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple smooth scrolling for footer links
+        document.addEventListener('DOMContentLoaded', function() {
+            const footerLinks = document.querySelectorAll('footer a[href^="#"]');
+            footerLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

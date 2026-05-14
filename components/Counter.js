@@ -1,0 +1,38 @@
+export default function Counter() {
+  return (
+    <div suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `<section class="counter-section counter-1">
+            <div class="container container-2">
+                <div class="row gy-5 fade-wrapper">
+                    <div class="col-lg-3 col-md-6 fade-top">
+                        <div class="counter-item">
+                            <h3 class="title"><span class="odometer" data-count="22">0</span><span class="icon">+</span></h3>
+                            <h4 class="sub-title">Years experience</h4>
+                            <p>Improving homes with expert <br> craftsmanship for years</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-top">
+                        <div class="counter-item">
+                            <h3 class="title"><span class="odometer" data-count="189">0</span><span class="icon">+</span></h3>
+                            <h4 class="sub-title">Projects completed</h4>
+                            <p>Improving homes with expert <br> craftsmanship for years</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-top">
+                        <div class="counter-item">
+                            <h3 class="title"><span class="odometer" data-count="265">0</span><span class="icon">+</span></h3>
+                            <h4 class="sub-title">Skilled Tradespeople</h4>
+                            <p>Improving homes with expert <br> craftsmanship for years</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-top">
+                        <div class="counter-item">
+                            <h3 class="title"><span class="odometer" data-count="328">0</span><span class="icon">+</span></h3>
+                            <h4 class="sub-title">Client satisfaction</h4>
+                            <p>Improving homes with expert <br> craftsmanship for years</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>` }} />
+  );
+}
