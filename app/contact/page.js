@@ -74,11 +74,11 @@ export default function ContactPage() {
                         <a href="tel:+919990447773" className="contact-info-link">
                           +91 9990447773 <i className="fa-solid fa-phone"></i>
                         </a>
-                        <div className="mt-3">
+                        {/* <div className="mt-3">
                           <a href="https://wa.me/919990447773" target="_blank" rel="noopener noreferrer" className="contact-info-link" style={{ background: '#25D366', color: 'white', padding: '8px 15px', borderRadius: '5px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
                             <i className="fa-brands fa-whatsapp"></i> Message on WhatsApp
                           </a>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                     
@@ -105,7 +105,7 @@ export default function ContactPage() {
               <Contact />
                             
               {/* FAQ Section */}
-              <section className="faq-section pt-110 pb-150 fade-wrapper bg-dark-1">
+              {/* <section className="faq-section pt-110 pb-150 fade-wrapper bg-dark-1">
                 <div className="container">
                   <div className="row section-heading-wrap">
                     <div className="shape">
@@ -180,7 +180,7 @@ export default function ContactPage() {
                     </div>
                   </div>
                 </div>
-              </section>
+              </section> */}
               
               <Footer />
           </div>

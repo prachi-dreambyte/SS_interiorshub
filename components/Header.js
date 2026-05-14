@@ -135,8 +135,8 @@ export default function Header() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         padding: '12px 30px',
-                        backgroundColor: 'transparent',
-                        color: 'var(--tl-color-common-white)',
+                        backgroundColor: '#caa05c',
+                        color: '#fff',
                         borderRadius: '100px',
                         fontWeight: '400',
                         fontSize: '16px',
@@ -254,98 +254,6 @@ export default function Header() {
             </div>
         </div>
         <div className="mobile-side-menu-overlay"></div>
-        
-        {/* Mobile Floating Get in Touch Button */}
-        <div className="mobile-floating-contact-btn" style={{
-            position: 'fixed',
-            bottom: '20px',
-            right: '20px',
-            zIndex: '999',
-            display: 'none'
-        }}>
-            <Link href="/contact" className="tl-primary-btn" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '14px 28px',
-                backgroundColor: 'var(--tl-color-theme-primary)',
-                color: 'var(--tl-color-common-white)',
-                borderRadius: '100px',
-                fontWeight: '600',
-                fontSize: '15px',
-                textDecoration: 'none',
-                boxShadow: '0 6px 20px rgba(202, 160, 92, 0.4)',
-                transition: 'all 0.3s ease-in-out',
-                whiteSpace: 'nowrap',
-                border: 'none',
-                position: 'relative',
-                overflow: 'hidden',
-                zIndex: '1'
-            }}>
-                Get in Touch
-                <span className="icon" style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                    color: 'var(--tl-color-common-white)',
-                    height: '30px',
-                    width: '30px',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginLeft: '8px',
-                    transition: 'all 0.3s ease-in-out'
-                }}>
-                    <i className="fa-solid fa-arrow-right" style={{
-                        fontSize: '14px',
-                        transform: 'rotate(-45deg)',
-                        transition: 'all 0.3s ease-in-out'
-                    }}></i>
-                </span>
-            </Link>
-        </div>
-        
-        <style jsx>{`
-            @media only screen and (max-width: 992px) {
-                .mobile-floating-contact-btn {
-                    display: block !important;
-                }
-                
-                .mobile-floating-contact-btn .tl-primary-btn:hover {
-                    transform: translateY(-3px);
-                    box-shadow: 0 8px 25px rgba(202, 160, 92, 0.5);
-                }
-                
-                .mobile-floating-contact-btn .tl-primary-btn:hover .icon {
-                    background-color: rgba(255, 255, 255, 0.3);
-                }
-                
-                .mobile-floating-contact-btn .tl-primary-btn:hover i {
-                    transform: rotate(0deg);
-                }
-            }
-            
-            @media only screen and (max-width: 576px) {
-                .mobile-floating-contact-btn {
-                    bottom: 15px;
-                    right: 15px;
-                }
-                
-                .mobile-floating-contact-btn .tl-primary-btn {
-                    padding: 12px 22px;
-                    font-size: 14px;
-                }
-                
-                .mobile-floating-contact-btn .tl-primary-btn .icon {
-                    height: 26px;
-                    width: 26px;
-                    margin-left: 6px;
-                }
-                
-                .mobile-floating-contact-btn .tl-primary-btn i {
-                    font-size: 12px;
-                }
-            }
-        `}</style>
     </>
   );
 }

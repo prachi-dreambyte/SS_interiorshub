@@ -220,13 +220,7 @@ export default function Contact() {
                   </div>
                 )}
 
-                <div className="mt-4 text-center">
-                  <p className="mb-3">For more information or to visit our office:</p>
-                  <a href="/contact" className="tl-primary-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
-                    Visit Contact Page
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
+               
               </form>
             </div>
           </div>
