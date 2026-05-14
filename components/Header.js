@@ -70,14 +70,14 @@ export default function Header() {
                     
                 </div>
             </div>
-        </header>\n<div id="popup-search-box">
+        </header><div id="popup-search-box">
             <div className="box-inner-wrap d-flex align-items-center">
                 <form id="form" action="#" method="get" role="search">
                     <input id="popup-search" type="text" name="s" placeholder="Type keywords here..." />
                 </form>
                 <div className="search-close"><i className="fa-sharp fa-regular fa-xmark"></i></div>
             </div>
-        </div>\n<div id="sidebar-area" className="sidebar-area" suppressHydrationWarning>
+        </div><div id="sidebar-area" className="sidebar-area" suppressHydrationWarning>
             <button className="sidebar-trigger close">
                 <svg className="sidebar-close" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="12.7px" viewBox="0 0 16 12.7"  xmlSpace="preserve">
                     <g>
@@ -88,8 +88,8 @@ export default function Header() {
             </button>
             <div className="side-menu-content">
                 <div className="side-menu-logo">
-                    <a className="dark-img" href="#home"><h5 className="text-white">SS Interiorshub</h5></a>
-                    <a className="light-img" href="#home"><h5 className="text-white">SS Interiorshub</h5></a>
+                    <a className="dark-img" href="#home"><h5 className="text-black text-center">SS Interiorshub</h5></a>
+                    <a className="light-img" href="#home"><h5 className="text-black text-center">SS Interiorshub</h5></a>
                 </div>
                 <div className="side-menu-wrap"></div>
                 <div className="side-menu-about">
@@ -129,6 +129,45 @@ export default function Header() {
                         </li>
                     </ul>
                 </div>
+                <div className="sidebar-get-in-touch" style={{marginTop: '30px', marginBottom: '30px', textAlign: 'center'}}>
+                    <Link href="/contact" className="tl-primary-btn white-btn" style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        padding: '12px 30px',
+                        backgroundColor: 'transparent',
+                        color: 'var(--tl-color-common-white)',
+                        borderRadius: '100px',
+                        fontWeight: '400',
+                        fontSize: '16px',
+                        textDecoration: 'none',
+                        border: '1px solid var(--tl-color-common-white)',
+                        transition: 'all 0.3s ease-in-out',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        zIndex: '1'
+                    }}>
+                        Get in Touch
+                        <span className="icon" style={{
+                            backgroundColor: 'var(--tl-color-theme-primary)',
+                            color: 'var(--tl-color-common-white)',
+                            height: '40px',
+                            width: '40px',
+                            borderRadius: '50%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            marginLeft: '10px',
+                            transition: 'all 0.3s ease-in-out'
+                        }}>
+                            <i className="fa-solid fa-arrow-right" style={{
+                                fontSize: '16px',
+                                transform: 'rotate(-45deg)',
+                                transition: 'all 0.3s ease-in-out'
+                            }}></i>
+                        </span>
+                    </Link>
+                </div>
                 <ul className="side-menu-social">
                     <li className="facebook"><a href="#"><i className="fab fa-facebook-f"></i></a></li>
                     <li className="instagram"><a href="#"><i className="fab fa-instagram"></i></a></li>
@@ -136,7 +175,7 @@ export default function Header() {
                     <li className="g-plus"><a href="#"><i className="fab fa-fab fa-google-plus"></i></a></li>
                 </ul>
             </div>
-        </div>\n<div id="sidebar-overlay"></div>\n<div className="mobile-side-menu">
+        </div><div id="sidebar-overlay"></div><div className="mobile-side-menu">
             <div className="side-menu-content">
                 <div className="side-menu-head">
                     <a href="index-2.html"><h5 className="text-white">SS Interiorshub</h5></a>
@@ -166,6 +205,45 @@ export default function Header() {
                             <a href="/contact" className="contact-page-link">Visit Contact Page</a>
                         </li>
                     </ul>
+                    <div className="mobile-get-in-touch-btn" style={{marginTop: '25px', textAlign: 'center'}}>
+                        <Link href="/contact" className="tl-primary-btn white-btn" style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            padding: '12px 30px',
+                            backgroundColor: 'transparent',
+                            color: 'var(--tl-color-common-white)',
+                            borderRadius: '100px',
+                            fontWeight: '400',
+                            fontSize: '16px',
+                            textDecoration: 'none',
+                            border: '1px solid var(--tl-color-common-white)',
+                            transition: 'all 0.3s ease-in-out',
+                            position: 'relative',
+                            overflow: 'hidden',
+                            zIndex: '1'
+                        }}>
+                            Get in Touch
+                            <span className="icon" style={{
+                                backgroundColor: 'var(--tl-color-theme-primary)',
+                                color: 'var(--tl-color-common-white)',
+                                height: '40px',
+                                width: '40px',
+                                borderRadius: '50%',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                marginLeft: '10px',
+                                transition: 'all 0.3s ease-in-out'
+                            }}>
+                                <i className="fa-solid fa-arrow-right" style={{
+                                    fontSize: '16px',
+                                    transform: 'rotate(-45deg)',
+                                    transition: 'all 0.3s ease-in-out'
+                                }}></i>
+                            </span>
+                        </Link>
+                    </div>
                 </div>
                 <ul className="side-menu-social">
                     <li className="facebook"><a href="#"><i className="fab fa-facebook-f"></i></a></li>
@@ -176,6 +254,98 @@ export default function Header() {
             </div>
         </div>
         <div className="mobile-side-menu-overlay"></div>
+        
+        {/* Mobile Floating Get in Touch Button */}
+        <div className="mobile-floating-contact-btn" style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            zIndex: '999',
+            display: 'none'
+        }}>
+            <Link href="/contact" className="tl-primary-btn" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '14px 28px',
+                backgroundColor: 'var(--tl-color-theme-primary)',
+                color: 'var(--tl-color-common-white)',
+                borderRadius: '100px',
+                fontWeight: '600',
+                fontSize: '15px',
+                textDecoration: 'none',
+                boxShadow: '0 6px 20px rgba(202, 160, 92, 0.4)',
+                transition: 'all 0.3s ease-in-out',
+                whiteSpace: 'nowrap',
+                border: 'none',
+                position: 'relative',
+                overflow: 'hidden',
+                zIndex: '1'
+            }}>
+                Get in Touch
+                <span className="icon" style={{
+                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                    color: 'var(--tl-color-common-white)',
+                    height: '30px',
+                    width: '30px',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginLeft: '8px',
+                    transition: 'all 0.3s ease-in-out'
+                }}>
+                    <i className="fa-solid fa-arrow-right" style={{
+                        fontSize: '14px',
+                        transform: 'rotate(-45deg)',
+                        transition: 'all 0.3s ease-in-out'
+                    }}></i>
+                </span>
+            </Link>
+        </div>
+        
+        <style jsx>{`
+            @media only screen and (max-width: 992px) {
+                .mobile-floating-contact-btn {
+                    display: block !important;
+                }
+                
+                .mobile-floating-contact-btn .tl-primary-btn:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 8px 25px rgba(202, 160, 92, 0.5);
+                }
+                
+                .mobile-floating-contact-btn .tl-primary-btn:hover .icon {
+                    background-color: rgba(255, 255, 255, 0.3);
+                }
+                
+                .mobile-floating-contact-btn .tl-primary-btn:hover i {
+                    transform: rotate(0deg);
+                }
+            }
+            
+            @media only screen and (max-width: 576px) {
+                .mobile-floating-contact-btn {
+                    bottom: 15px;
+                    right: 15px;
+                }
+                
+                .mobile-floating-contact-btn .tl-primary-btn {
+                    padding: 12px 22px;
+                    font-size: 14px;
+                }
+                
+                .mobile-floating-contact-btn .tl-primary-btn .icon {
+                    height: 26px;
+                    width: 26px;
+                    margin-left: 6px;
+                }
+                
+                .mobile-floating-contact-btn .tl-primary-btn i {
+                    font-size: 12px;
+                }
+            }
+        `}</style>
     </>
   );
 }

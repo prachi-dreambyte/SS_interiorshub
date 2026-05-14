@@ -18,9 +18,7 @@ export default function About() {
                                 <li><img src="assets/img/icon/about-1.png" alt="about">Residential Design</li>
                             </ul>
                             <p>Whether it’s your home, office, or a commercial project, we are always dedicated to bringing your vision to life.Our numbers speak better than words:</p>
-                            <div class="about-btn">
-                                <a href="#about" class="tl-primary-btn white-btn">More About Us <span class="icon"><i class="fa-regular fa-arrow-right"></i></span></a>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="col-lg-6">

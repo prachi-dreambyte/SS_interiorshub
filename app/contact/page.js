@@ -103,30 +103,7 @@ export default function ContactPage() {
 
               {/* Main Contact Form Section */}
               <Contact />
-              
-              {/* WhatsApp Note Section */}
-              <section className="whatsapp-note-section pt-50 pb-50 fade-wrapper">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-lg-12 text-center">
-                      <div className="whatsapp-note-card p-4" style={{ background: '#f0fff4', borderRadius: '10px', borderLeft: '4px solid #25D366' }}>
-                        <h3 className="mb-3" style={{ color: '#25D366' }}>
-                          <i className="fa-brands fa-whatsapp"></i> Prefer WhatsApp?
-                        </h3>
-                        <p className="mb-0">
-                          You can also message us directly on WhatsApp at <strong>+91 9990447773</strong>. Our team responds quickly during business hours (9 AM - 7 PM, Monday to Saturday).
-                        </p>
-                        <div className="mt-3">
-                          <a href="https://wa.me/919990447773" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#25D366', color: 'white', padding: '10px 25px', borderRadius: '5px' }}>
-                            <i className="fa-brands fa-whatsapp"></i> Open WhatsApp Now
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              
+                            
               {/* FAQ Section */}
               <section className="faq-section pt-110 pb-150 fade-wrapper bg-dark-1">
                 <div className="container">

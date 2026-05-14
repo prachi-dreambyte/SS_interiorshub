@@ -54,7 +54,7 @@ export default function Features() {
               >
                 <span className="number">01</span>
                 <h3 className="title">
-                  <a href="service-details.html">Curtains & Blinds</a>
+                  <p>Curtains & Blinds</p>
                 </h3>
                 {/* <a href="service-details.html" className="arrow">
                   <i className="fa-regular fa-arrow-right"></i>
@@ -68,7 +68,7 @@ export default function Features() {
               >
                 <span className="number">02</span>
                 <h3 className="title">
-                  <a href="service-details.html">PVC Panels</a>
+                  <p>PVC Panels</p>
                 </h3>
                 {/* <a href="service-details.html" className="arrow">
                   <i className="fa-regular fa-arrow-right"></i>
@@ -82,7 +82,7 @@ export default function Features() {
               >
                 <span className="number">03</span>
                 <h3 className="title">
-                  <a href="service-details.html">UPVC Panels</a>
+                  <p>UPVC Panels</p>
                 </h3>
                 {/* <a href="service-details.html" className="arrow">
                   <i className="fa-regular fa-arrow-right"></i>
@@ -96,7 +96,7 @@ export default function Features() {
               >
                 <span className="number">04</span>
                 <h3 className="title">
-                  <a href="service-details.html">Sofa Repair</a>
+                  <p>Sofa Repair</p>
                 </h3>
                 {/* <a href="service-details.html" className="arrow">
                   <i className="fa-regular fa-arrow-right"></i>
@@ -110,7 +110,7 @@ export default function Features() {
               >
                 <span className="number">05</span>
                 <h3 className="title">
-                  <a href="service-details.html">Flooring</a>
+                  <p>Flooring</p>
                 </h3>
                 {/* <a href="service-details.html" className="arrow">
                   <i className="fa-regular fa-arrow-right"></i>

@@ -208,12 +208,6 @@ export default function Contact() {
                   {isSubmitting ? 'Opening WhatsApp...' : 'Send via WhatsApp'}
                 </button>
 
-                <div className="mt-3">
-                  <a href="https://wa.me/919990447773" target="_blank" rel="noopener noreferrer" className="custom-contact-btn" style={{ background: '#25D366', display: 'block', textAlign: 'center' }}>
-                    <i className="fa-brands fa-whatsapp"></i> Direct WhatsApp Chat
-                  </a>
-                </div>
-
                 {submitStatus === 'success' && (
                   <div className="mt-4 p-3" style={{ background: '#f8fff8', borderLeft: '4px solid #28a745', color: '#28a745' }}>
                     <strong>Success!</strong> WhatsApp is opening with your message. Please send it to +91 9990447773. We'll respond shortly.
