@@ -47,7 +47,7 @@ export default function Contact() {
       
       try {
         // Format the message for WhatsApp
-        const whatsappMessage = `*New Contact Form Submission from SS Interiorshub Website*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Subject:* ${formData.subject}\n*Message:* ${formData.message}\n\n_This message was sent via the contact form on SS Interiorshub website._`;
+        const whatsappMessage = `*Name:*${formData.name}\n*Email:*${formData.email}\n*Subject:*${formData.subject}\n*Message:*${formData.message}_`;
         
         // Create WhatsApp URL with the phone number (include country code 91 for India)
         // WhatsApp requires: country code + phone number without + sign
