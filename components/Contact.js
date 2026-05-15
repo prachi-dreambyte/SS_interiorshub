@@ -46,20 +46,19 @@ export default function Contact() {
       setSubmitStatus(null);
       
       try {
-        // Format the message for WhatsApp
-        const whatsappMessage = `*Name:*${formData.name}\n*Email:*${formData.email}\n*Subject:*${formData.subject}\n*Message:*${formData.message}_`;
+       
+        const whatsappMessage = `*Name:${formData.name}\n*Email:${formData.email}\n*Subject:${formData.subject}\n*Message:${formData.message}_`;
         //  const whatsappMessage = `*New Contact Form Submission from SS Interiorshub Website*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Subject:* ${formData.subject}\n*Message:* ${formData.message}\n\n_This message was sent via the contact form on SS Interiorshub website._`;
         
-        // Create WhatsApp URL with the phone number (include country code 91 for India)
+       
         // WhatsApp requires: country code + phone number without + sign
         // Example: Indian number +91 9990447773 becomes 919990447773
         const whatsappNumber = '919990447773'; // Country code +91, remove the + sign
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
         
-        // Open WhatsApp in a new tab
         window.open(whatsappUrl, '_blank');
         
-        // Also send email as backup (optional)
+       
         try {
           const response = await fetch('/api/contact', {
             method: 'POST',
@@ -87,14 +86,12 @@ export default function Contact() {
         setSubmitStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });
         
-        // Hide success message after 5 seconds
         setTimeout(() => setSubmitStatus(null), 5000);
         
       } catch (error) {
         console.error('Error:', error);
         setSubmitStatus('error');
         
-        // Hide error message after 5 seconds
         setTimeout(() => setSubmitStatus(null), 5000);
       } finally {
         setIsSubmitting(false);
@@ -118,7 +115,6 @@ export default function Contact() {
         </div>
 
         <div className="row gy-5">
-          {/* suppressHydrationWarning prevents mismatch errors from animation libraries (e.g. GSAP) that inject inline styles before React hydrates */}
           <div className="col-lg-6 slide-anim" data-offset="100" data-direction="left" suppressHydrationWarning>
             <style>{`
               .custom-contact-form .form-group {
@@ -369,9 +365,8 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* suppressHydrationWarning prevents mismatch errors from animation libraries (e.g. GSAP) that inject inline styles before React hydrates */}
+      
           <div className="col-lg-6 slide-anim" data-offset="100" data-direction="right" suppressHydrationWarning>
-            {/* Contact Info Cards for Desktop */}
            
 
             <div className="map-wrapper h-100" style={{ borderRadius: '10px', overflow: 'hidden', minHeight: '400px' }}>

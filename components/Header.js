@@ -88,7 +88,7 @@ export default function Header() {
             </button>
             <div className="side-menu-content">
                 <div className="side-menu-logo">
-                    <a className="dark-img" href="#home"><h5 className="text-black text-center">SS Interiorshub</h5></a>
+                    <a className="dark-img" href="#home"><h5 className="text-white text-center">SS Interiorshub</h5></a>
                     <a className="light-img" href="#home"><h5 className="text-black text-center">SS Interiorshub</h5></a>
                 </div>
                 <div className="side-menu-wrap"></div>
@@ -118,6 +118,7 @@ export default function Header() {
                 <div className="side-menu-contact">
                     <ul className="side-menu-list">
                         <li>
+                            <i className="fa-solid fa-map-marker-alt" style={{ color: '#1a1a1a' }}></i>
                             LGF-25 ajnara arcade crossing republic
                         </li>
                         <li>

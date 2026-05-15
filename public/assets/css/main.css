@@ -14483,6 +14483,7 @@ ul {
 .side-menu-list li {
   display: flex;
   align-items: center;
+  gap:1%;
 }
 .side-menu-list li:not(:last-of-type) {
   margin-bottom: 20px;
@@ -14561,11 +14562,11 @@ ul {
 }
 .side-menu-content .side-menu-contact .side-menu-list li {
   color: var(--tl-color-common-white);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 .side-menu-content .side-menu-contact .side-menu-list li:not(:last-of-type) {
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
 }
 .side-menu-content .side-menu-contact .side-menu-list li:nth-child(2) {
   margin-bottom: 10px;
