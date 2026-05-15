@@ -294,54 +294,6 @@ export default function Contact() {
             {/* Contact Info Cards for Mobile */}
             <div className="d-lg-none mb-5">
               <div className="row gy-4">
-                <div className="col-12">
-                  <div className="contact-info-card">
-                    <div className="contact-icon">
-                      <i className="fa-solid fa-location-dot" style={{ color: '#1a1a1a' }}></i>
-                    </div>
-                    <h3 className="contact-info-title">Our Location</h3>
-                    <p className="contact-info-text">
-                      LGF-25 Ajnara Arcade<br />
-                      Crossings Republik<br />
-                      Ghaziabad, Delhi NCR
-                    </p>
-                    <a href="https://maps.google.com/?q=LGF-25+Ajnara+Arcade+Crossings+Republik+Ghaziabad" target="_blank" rel="noopener noreferrer" className="contact-info-link">
-                      View on Map <i className="fa-solid fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="col-12">
-                  <div className="contact-info-card">
-                    <div className="contact-icon">
-                      <i className="fa-solid fa-phone" style={{ color: '#1a1a1a' }}></i>
-                    </div>
-                    <h3 className="contact-info-title">Phone & WhatsApp</h3>
-                    <p className="contact-info-text">
-                      Available Monday to Saturday<br />
-                      9:00 AM to 7:00 PM
-                    </p>
-                    <a href="tel:+919990447773" className="contact-info-link">
-                      +91 9990447773 <i className="fa-solid fa-phone"></i>
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="col-12">
-                  <div className="contact-info-card">
-                    <div className="contact-icon">
-                      <i className="fa-solid fa-envelope" style={{ color: '#1a1a1a' }}></i>
-                    </div>
-                    <h3 className="contact-info-title">Email Address</h3>
-                    <p className="contact-info-text">
-                      For inquiries, quotes, or consultations<br />
-                      We respond within 24 hours
-                    </p>
-                    <a href="mailto:Sethiinteriors1@gmail.com" className="contact-info-link">
-                      Sethiinteriors1@gmail.com <i className="fa-solid fa-envelope"></i>
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
 
