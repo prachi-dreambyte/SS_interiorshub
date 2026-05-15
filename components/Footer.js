@@ -18,7 +18,7 @@ export default function Footer() {
                             <p class="mb-0">LGF-25 ajnara arcade crossing republic</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-6 col-md-6">
                         <div class="footer-widget footer-col-2">
                             <ul class="footer-list">
                                 <li><a href="#about">About Us</a></li>
@@ -29,7 +29,7 @@ export default function Footer() {
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-6 col-md-6">
                         <div class="footer-widget footer-col-2 pl-0">
                             <ul class="footer-list">
                                 <li><a href="#portfolio">Our Projects</a></li>

@@ -27,7 +27,7 @@ export default function ContactPage() {
       <div id="antra-smooth-wrapper" suppressHydrationWarning>
           <div id="antra-smooth-content" suppressHydrationWarning>
               {/* Contact Page Hero Section */}
-              <section className="contact-hero-section pt-180 pb-150 fade-wrapper bg-dark-1">
+              <section className="contact-hero-section pt-100 pb-100 fade-wrapper bg-dark-1">
                 <div className="container">
                   <div className="row">
                     <div className="col-lg-12">
@@ -92,8 +92,8 @@ export default function ContactPage() {
                           For inquiries, quotes, or consultations<br />
                           We respond within 24 hours
                         </p>
-                        <a href="mailto:pantprachi58@gmail.com" className="contact-info-link">
-                          pantprachi58@gmail.com <i className="fa-solid fa-envelope"></i>
+                        <a href="mailto:Sethiinteriors1@gmail.com" className="contact-info-link">
+                          Sethiinteriors1@gmail.com <i className="fa-solid fa-envelope"></i>
                         </a>
                       </div>
                     </div>

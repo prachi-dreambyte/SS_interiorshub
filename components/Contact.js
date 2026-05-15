@@ -66,8 +66,15 @@ export default function Contact() {
             body: JSON.stringify(formData),
           });
           
+          const result = await response.json();
+          
           if (!response.ok) {
-            console.error('Email backup failed, but WhatsApp message was sent');
+            console.error('Email backup failed:', result.error);
+          } else {
+            console.log('Email backup status:', result.message);
+            if (result.warning) {
+              console.warn('Email configuration warning:', result.warning);
+            }
           }
         } catch (emailError) {
           console.error('Email backup error:', emailError);
@@ -115,9 +122,9 @@ export default function Contact() {
                 margin-bottom: 25px;
               }
               .custom-contact-form .form-control {
-                background-color: #f5f5f5;
+                background-color: #fff;
                 border: 1px solid #eee;
-                border-radius: 0;
+                border-radius: 8px;
                 padding: 18px 25px;
                 font-size: 16px;
                 color: #333;
@@ -128,6 +135,7 @@ export default function Contact() {
                 border-color: #333;
                 background-color: #fff;
                 outline: none;
+                box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
               }
               .custom-contact-form textarea.form-control {
                 min-height: 150px;
@@ -142,18 +150,199 @@ export default function Contact() {
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 border: none;
+                border-radius: 8px;
                 transition: all 0.3s ease;
                 cursor: pointer;
+                width: 100%;
               }
               .custom-contact-btn:hover {
                 background-color: #333333;
                 color: #ffffff;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
               }
               .custom-contact-btn:disabled {
                 opacity: 0.7;
                 cursor: not-allowed;
+                transform: none;
+                box-shadow: none;
+              }
+              .error-message {
+                color: #ff4d4d;
+                font-size: 14px;
+                margin-top: 5px;
+                display: block;
+              }
+              .status-message {
+                margin-top: 20px;
+                padding: 15px;
+                border-radius: 8px;
+                font-size: 14px;
+              }
+              .success-message {
+                background: #f8fff8;
+                border-left: 4px solid #28a745;
+                color: #28a745;
+              }
+              .error-message-box {
+                background: #fff8f8;
+                border-left: 4px solid #dc3545;
+                color: #dc3545;
+              }
+              .info-message {
+                background: #f0f8ff;
+                border-left: 4px solid #007bff;
+                color: #007bff;
+              }
+              .contact-icon {
+                font-size: 24px;
+                color: #1a1a1a;
+                margin-bottom: 15px;
+                display: inline-block;
+                transition: color 0.3s ease;
+              }
+              .contact-icon:hover {
+                color: #333333;
+              }
+              .contact-info-card {
+                text-align: center;
+                padding: 30px 20px;
+                border-radius: 10px;
+                background: #f9f9f9;
+                margin-bottom: 30px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+              }
+              .contact-info-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+              }
+              .contact-info-card .contact-icon {
+                font-size: 40px;
+                margin-bottom: 20px;
+                color: #1a1a1a;
+              }
+              .contact-info-card .contact-info-title {
+                font-size: 20px;
+                margin-bottom: 15px;
+                color: #333;
+              }
+              .contact-info-card .contact-info-text {
+                color: #666;
+                margin-bottom: 20px;
+                line-height: 1.6;
+              }
+              .contact-info-card .contact-info-link {
+                color: #1a1a1a;
+                text-decoration: none;
+                font-weight: 600;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                transition: color 0.3s ease;
+              }
+              .contact-info-card .contact-info-link:hover {
+                color: #333333;
+              }
+              .contact-info-card .contact-info-link i {
+                font-size: 14px;
+              }
+              
+              /* Responsive styles */
+              @media (max-width: 768px) {
+                .custom-contact-form .form-control {
+                  padding: 15px 20px;
+                  font-size: 15px;
+                }
+                .custom-contact-btn {
+                  padding: 16px 30px;
+                  font-size: 15px;
+                }
+                .contact-info-card {
+                  padding: 25px 15px;
+                  margin-bottom: 20px;
+                }
+                .contact-info-card .contact-icon {
+                  font-size: 32px;
+                }
+                .contact-info-card .contact-info-title {
+                  font-size: 18px;
+                }
+              }
+              @media (max-width: 576px) {
+                .custom-contact-form .form-control {
+                  padding: 12px 15px;
+                  font-size: 14px;
+                }
+                .custom-contact-btn {
+                  padding: 14px 20px;
+                  font-size: 14px;
+                }
+                .contact-info-card {
+                  padding: 20px 15px;
+                }
+                .contact-info-card .contact-icon {
+                  font-size: 28px;
+                }
+                .contact-info-card .contact-info-title {
+                  font-size: 16px;
+                }
               }
             `}</style>
+            
+            {/* Contact Info Cards for Mobile */}
+            <div className="d-lg-none mb-5">
+              <div className="row gy-4">
+                <div className="col-12">
+                  <div className="contact-info-card">
+                    <div className="contact-icon">
+                      <i className="fa-solid fa-location-dot" style={{ color: '#1a1a1a' }}></i>
+                    </div>
+                    <h3 className="contact-info-title">Our Location</h3>
+                    <p className="contact-info-text">
+                      LGF-25 Ajnara Arcade<br />
+                      Crossings Republik<br />
+                      Ghaziabad, Delhi NCR
+                    </p>
+                    <a href="https://maps.google.com/?q=LGF-25+Ajnara+Arcade+Crossings+Republik+Ghaziabad" target="_blank" rel="noopener noreferrer" className="contact-info-link">
+                      View on Map <i className="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="col-12">
+                  <div className="contact-info-card">
+                    <div className="contact-icon">
+                      <i className="fa-solid fa-phone" style={{ color: '#1a1a1a' }}></i>
+                    </div>
+                    <h3 className="contact-info-title">Phone & WhatsApp</h3>
+                    <p className="contact-info-text">
+                      Available Monday to Saturday<br />
+                      9:00 AM to 7:00 PM
+                    </p>
+                    <a href="tel:+919990447773" className="contact-info-link">
+                      +91 9990447773 <i className="fa-solid fa-phone"></i>
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="col-12">
+                  <div className="contact-info-card">
+                    <div className="contact-icon">
+                      <i className="fa-solid fa-envelope" style={{ color: '#1a1a1a' }}></i>
+                    </div>
+                    <h3 className="contact-info-title">Email Address</h3>
+                    <p className="contact-info-text">
+                      For inquiries, quotes, or consultations<br />
+                      We respond within 24 hours
+                    </p>
+                    <a href="mailto:Sethiinteriors1@gmail.com" className="contact-info-link">
+                      Sethiinteriors1@gmail.com <i className="fa-solid fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="contact-form-wrap">
               <form onSubmit={handleSubmit} className="custom-contact-form">
                 
@@ -166,7 +355,7 @@ export default function Contact() {
                     className="form-control" 
                     placeholder="Your Name" 
                   />
-                  {errors.name && <span style={{ color: '#ff4d4d', fontSize: '14px', marginTop: '5px', display: 'block' }}>{errors.name}</span>}
+                  {errors.name && <span className="error-message">{errors.name}</span>}
                 </div>
 
                 <div className="form-group">
@@ -178,7 +367,7 @@ export default function Contact() {
                     className="form-control" 
                     placeholder="Your Email" 
                   />
-                  {errors.email && <span style={{ color: '#ff4d4d', fontSize: '14px', marginTop: '5px', display: 'block' }}>{errors.email}</span>}
+                  {errors.email && <span className="error-message">{errors.email}</span>}
                 </div>
 
                 <div className="form-group">
@@ -190,7 +379,7 @@ export default function Contact() {
                     className="form-control" 
                     placeholder="Subject" 
                   />
-                  {errors.subject && <span style={{ color: '#ff4d4d', fontSize: '14px', marginTop: '5px', display: 'block' }}>{errors.subject}</span>}
+                  {errors.subject && <span className="error-message">{errors.subject}</span>}
                 </div>
 
                 <div className="form-group">
@@ -201,7 +390,7 @@ export default function Contact() {
                     className="form-control" 
                     placeholder="Your Message" 
                   ></textarea>
-                  {errors.message && <span style={{ color: '#ff4d4d', fontSize: '14px', marginTop: '5px', display: 'block' }}>{errors.message}</span>}
+                  {errors.message && <span className="error-message">{errors.message}</span>}
                 </div>
 
                 <button type="submit" className="custom-contact-btn" disabled={isSubmitting}>
@@ -209,13 +398,13 @@ export default function Contact() {
                 </button>
 
                 {submitStatus === 'success' && (
-                  <div className="mt-4 p-3" style={{ background: '#f8fff8', borderLeft: '4px solid #28a745', color: '#28a745' }}>
+                  <div className="status-message success-message">
                     <strong>Success!</strong> WhatsApp is opening with your message. Please send it to +91 9990447773. We'll respond shortly.
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="mt-4 p-3" style={{ background: '#fff8f8', borderLeft: '4px solid #dc3545', color: '#dc3545' }}>
+                  <div className="status-message error-message-box">
                     <strong>Error!</strong> Failed to process your message. Please try again or contact us directly at +91 9990447773.
                   </div>
                 )}
@@ -227,9 +416,12 @@ export default function Contact() {
 
           {/* suppressHydrationWarning prevents mismatch errors from animation libraries (e.g. GSAP) that inject inline styles before React hydrates */}
           <div className="col-lg-6 slide-anim" data-offset="100" data-direction="right" suppressHydrationWarning>
+            {/* Contact Info Cards for Desktop */}
+           
+
             <div className="map-wrapper h-100" style={{ borderRadius: '10px', overflow: 'hidden', minHeight: '400px' }}>
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.112247200978!2d77.4528899759961!3d28.62862007567019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef0e2c7e8c5f%3A0x4b6b5c5c5c5c5c5c!2sLGF-25%20Ajnara%20Arcade%2C%20Crossings%20Republik%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201016!5e0!3m2!1sen!2sin!4v1715621234567!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14009.495602679179!2d77.4197744645638!3d28.618553946995558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef8c5b37846f%3A0xec0a735ac0f34c48!2sSS%20INTERIORS!5e0!3m2!1sen!2sin!4v1778818584851!5m2!1sen!2sin" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
