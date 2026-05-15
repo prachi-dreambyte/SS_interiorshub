@@ -27,7 +27,7 @@ export default function ContactPage() {
       <div id="antra-smooth-wrapper" suppressHydrationWarning>
           <div id="antra-smooth-content" suppressHydrationWarning>
               {/* Contact Page Hero Section */}
-              <section className="contact-hero-section pt-100 pb-100 fade-wrapper bg-dark-1">
+              <section className="contact-hero-section pt-100 fade-wrapper bg-dark-1">
                 <div className="container">
                   <div className="row">
                     <div className="col-lg-12">
@@ -43,7 +43,7 @@ export default function ContactPage() {
               {/* Contact Info Section */}
               <section className="contact-info-section pt-50 pb-50 fade-wrapper">
                 <div className="container">
-                  <div className="row gy-5">
+                  <div className="row">
                     <div className="col-lg-4 col-md-6 slide-anim" data-offset="100" data-direction="left" suppressHydrationWarning>
                       <div className="contact-info-card">
                         <div className="contact-icon">
@@ -66,10 +66,8 @@ export default function ContactPage() {
                         <div className="contact-icon">
                           <i className="fa-solid fa-phone"></i>
                         </div>
-                        <h3 className="contact-info-title">Phone & WhatsApp</h3>
-                        <p className="contact-info-text">
-                          Available Monday to Saturday<br />
-                          9:00 AM to 7:00 PM
+                        <h3 className="contact-info-title">Phone</h3>
+                        <p className="contact-info-text">Contact SS Interiorshub 
                         </p>
                         <a href="tel:+919990447773" className="contact-info-link">
                           +91 9990447773 <i className="fa-solid fa-phone"></i>

@@ -38,7 +38,7 @@ export default function Header() {
                             
                         </div>
                         <div className="header-right-wrap">
-                            <a href="tel:+480123678900" className="header-contact">
+                            <a href="tel:+919990447773" className="header-contact">
                                 <span className="icon"><i className="fa-regular fa-phone"></i></span>
                                 <span className="content">
                                     <span className="call-text">Call Us Phone</span>
@@ -121,8 +121,8 @@ export default function Header() {
                             LGF-25 ajnara arcade crossing republic
                         </li>
                         <li>
-                            <a href="tel:+91 9990447773">+91 9990447773</a><br/>
-                            <a href="tel:+91 9990447773">+91 7827097773</a>
+                            <a href="tel:+919990447773">+91 9990447773</a><br/>
+                            <a href="tel:+917827097773">+91 7827097773</a>
                         </li>
                         <li>
                             <a className="mail" href="mailto:Sethiinteriors1@gmail.com">Sethiinteriors1@gmail.com</a>
@@ -194,7 +194,7 @@ export default function Header() {
                         <li>
                             <i className="fas fa-phone"></i>
                             <a href="tel:+919990447773">+91 9990447773</a><br/>
-                            <a href="tel:+91 9990447773">+91 7827097773</a>
+                            <a href="tel:+917827097773">+91 7827097773</a>
                         </li>
                         <li>
                             <i className="fas fa-envelope-open-text"></i>

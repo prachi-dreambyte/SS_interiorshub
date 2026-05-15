@@ -47,11 +47,13 @@ export default function Contact() {
       
       try {
         // Format the message for WhatsApp
-        const whatsappMessage = `*New Contact Form Submission from SS Interiorshub Website*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Subject:* ${formData.subject}%0A*Message:* ${formData.message}%0A%0A_This message was sent via the contact form on SS Interiorshub website._`;
+        const whatsappMessage = `*New Contact Form Submission from SS Interiorshub Website*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Subject:* ${formData.subject}\n*Message:* ${formData.message}\n\n_This message was sent via the contact form on SS Interiorshub website._`;
         
-        // Create WhatsApp URL with the phone number
-        const whatsappNumber = '9990447773';
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+        // Create WhatsApp URL with the phone number (include country code 91 for India)
+        // WhatsApp requires: country code + phone number without + sign
+        // Example: Indian number +91 9990447773 becomes 919990447773
+        const whatsappNumber = '919990447773'; // Country code +91, remove the + sign
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
         
         // Open WhatsApp in a new tab
         window.open(whatsappUrl, '_blank');
