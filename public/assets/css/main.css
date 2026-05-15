@@ -14444,7 +14444,7 @@ ul {
 @media (max-width: 767px) {
   .sidebar-area {
     width: 320px;
-    padding: 40px 40px 60px 40px;
+    padding: 40px 20px 60px 40px;
   }
   .sidebar-content .list-post-area.list-2 .list-post-card .post-img {
     height: 90px;

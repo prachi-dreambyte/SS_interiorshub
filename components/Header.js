@@ -121,10 +121,12 @@ export default function Header() {
                             LGF-25 ajnara arcade crossing republic
                         </li>
                         <li>
+                            <i className="fa-solid fa-phone" style={{ color: '#1a1a1a' }}></i>
                             <a href="tel:+919990447773">+91 9990447773</a><br/>
                             <a href="tel:+917827097773">+91 7827097773</a>
                         </li>
                         <li>
+                            <i className="fa-solid fa-envelope" style={{ color: '#1a1a1a' }}></i>
                             <a className="mail" href="mailto:Sethiinteriors1@gmail.com">Sethiinteriors1@gmail.com</a>
                         </li>
                     </ul>
